@@ -86,6 +86,12 @@ button {
   margin-bottom: 16px;
 }
 
+/* Fallback for Font Awesome icons */
+.contact-links a::before {
+  margin-right: 6px;
+}
+
+/* Ensure links work without icons */
 .contact-links a {
   color: #000;
   text-decoration: none;
@@ -94,10 +100,18 @@ button {
   align-items: center;
   gap: 6px;
   transition: color 0.2s ease;
+  min-height: 24px;
 }
 
 .contact-links a:hover {
   color: #666;
+}
+
+/* Make sure Font Awesome icons display properly */
+.fab, .fas {
+  width: 16px;
+  text-align: center;
+  display: inline-block;
 }
 
 .contact-info {
@@ -486,4 +500,9 @@ h2 { font-size: 1.75rem; margin-bottom: 1rem; }
 
 .header.scrolled {
   box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+}
+
+/* Font loading optimization */
+@font-face {
+  font-display: swap;
 } 
