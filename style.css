@@ -49,9 +49,10 @@ button {
 
 /* Container */
 .container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 40px 40px;
+  width: 95%;
 }
 
 /* Header */
@@ -82,8 +83,9 @@ button {
 
 .contact-links {
   display: flex;
-  gap: 20px;
+  gap: 24px;
   margin-bottom: 16px;
+  flex-wrap: wrap;
 }
 
 /* Fallback for Font Awesome icons */
@@ -117,7 +119,7 @@ button {
 .contact-info {
   color: #666;
   display: flex;
-  gap: 20px;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
@@ -223,8 +225,9 @@ button {
 /* Skills Grid */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+  max-width: none;
 }
 
 .skill-item {
@@ -235,6 +238,91 @@ button {
   font-weight: 500;
   font-size: 14px;
   color: #333;
+}
+
+/* Role Subsections */
+.role-subsection {
+  margin: 16px 0;
+  padding-left: 16px;
+  border-left: 2px solid #f0f0f0;
+}
+
+.role-subsection h5 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+}
+
+/* Research & Competition Achievements */
+.achievement-item {
+  margin-bottom: 40px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #eee;
+  background: #fafafa;
+  padding: 24px;
+  border-radius: 8px;
+  border-left: 4px solid #000;
+}
+
+.achievement-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.achievement-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.achievement-header h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin: 0;
+}
+
+.medal {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.silver-medal {
+  background: linear-gradient(135deg, #C0C0C0, #E8E8E8);
+  color: #333;
+  border: 1px solid #B0B0B0;
+}
+
+.bronze-medal {
+  background: linear-gradient(135deg, #CD7F32, #E6A85C);
+  color: #fff;
+  border: 1px solid #B8722C;
+}
+
+.platform {
+  background: #000;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.achievement-item p {
+  margin-bottom: 12px;
+  color: #333;
+  line-height: 1.6;
 }
 
 /* Projects */
@@ -287,7 +375,8 @@ button {
 /* Responsive Design */
 @media (max-width: 768px) {
   .container {
-    padding: 20px 16px;
+    padding: 20px 20px;
+    width: 95%;
   }
   
   .header h1 {
@@ -341,11 +430,21 @@ button {
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .achievement-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .role-subsection {
+    padding-left: 12px;
+  }
 }
 
 /* Layout Helpers */
 .container {
-  width: min(90%, 60rem);
+  width: min(95%, 75rem);
   margin-inline: auto;
 }
 
