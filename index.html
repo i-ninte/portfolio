@@ -43,18 +43,40 @@
         <span>slyobeng111@gmail.com</span>
         <span>+233 593 178 619</span>
       </div>
-      
+
+      <div class="header-actions">
+        <a href="https://drive.google.com/uc?export=download&id=1myE7nNOTeRcWeVs3o59CsJpMHvMEGxE_" class="btn-primary" target="_blank"><i class="fas fa-download"></i>Download CV</a>
+        <a href="https://drive.google.com/file/d/1U4gLTli4a9VGtMmlHYYFrvYa4ZBqKMuh/view?usp=sharing" class="btn-secondary" target="_blank"><i class="fas fa-file-alt"></i>Research Statement</a>
+      </div>
+
       <div class="initials">KO</div>
     </header>
 
-    <!-- About -->
-    <section class="section">
-      <h2>About</h2>
-      <p>As an AI/ML Engineer and researcher, I specialize in developing scalable machine learning solutions that address critical challenges in healthcare, agriculture, and social impact domains. My work spans computer vision, natural language processing, and IoT integration, with a strong emphasis on deploying production-ready models that drive measurable outcomes.</p>
-      <p>My research contributions include award-winning solutions in healthcare AI (clinical reasoning, disease outbreak prediction) and agricultural technology (crop disease detection for mobile deployment). I am particularly interested in responsible AI development, with focus on building systems that are accessible, ethical, and beneficial for underserved communities in developing regions.</p>
-      <p>Currently pursuing advanced research opportunities to further explore the intersection of AI and social good. </p>
+    <!-- Navigation Tabs -->
+    <nav class="tab-navigation">
+      <button class="tab-btn active" data-tab="about">About</button>
+      <button class="tab-btn" data-tab="experience">Experience</button>
+      <button class="tab-btn" data-tab="research">Research</button>
+      <button class="tab-btn" data-tab="education">Education</button>
+      <button class="tab-btn" data-tab="projects">Projects</button>
+    </nav>
 
-    <!-- Work Experience -->
+    <!-- Tab Content Container -->
+    <div class="tab-content-container">
+
+      <!-- About Tab -->
+      <div class="tab-content active" data-content="about">
+        <section class="section">
+          <h2>About</h2>
+          <p>As an AI/ML Engineer and researcher, I specialize in developing scalable machine learning solutions that address critical challenges in healthcare, agriculture, and social impact domains. My work spans computer vision, natural language processing, and IoT integration, with a strong emphasis on deploying production-ready models that drive measurable outcomes.</p>
+          <p>My research contributions include award-winning solutions in healthcare AI (clinical reasoning, disease outbreak prediction) and agricultural technology (crop disease detection for mobile deployment). I am particularly interested in responsible AI development, with focus on building systems that are accessible, ethical, and beneficial for underserved communities in developing regions.</p>
+          <p>Currently pursuing advanced research opportunities to further explore the intersection of AI and social good.</p>
+        </section>
+      </div>
+
+      <!-- Experience Tab -->
+      <div class="tab-content" data-content="experience">
+        <!-- Work Experience -->
     <section class="section">
       <h2>Work Experience</h2>
       
@@ -78,6 +100,7 @@
           <p>• Built ASR models using OpenAI Whisper and PyAnnote for speech diarization, automatic transcription, and multi-language translation pipelines</p>
           <p>• Developed trash classifier model using YOLOv11 for deployment on robotic arm systems</p>
           <p>• Built face recognition-based attendance system with anti-spoofing capabilities</p>
+          <p>• Created MoMo and Kowri reconciliation tools for automated fraud detection and financial transaction validation</p>
         </div>
         
         <div class="role-subsection">
@@ -129,8 +152,31 @@
         <div class="tech-stack">Power BI, Python, Machine Learning, Tableau</div>
       </div>
     </section>
+      </div>
 
-    <!-- Research & Competition Achievements -->
+      <!-- Research Tab -->
+      <div class="tab-content" data-content="research">
+        <!-- Research Publications -->
+        <section class="section">
+          <h2>Research Publications</h2>
+
+          <div class="publication-item">
+            <h3>AQUAMIND: A Predictive Model for Water Quality Using Machine Learning and IoT Sensors</h3>
+            <p class="publication-meta">Undergraduate Research Thesis • 2024</p>
+            <p class="publication-abstract">Developed an integrated IoT-ML system for real-time water quality prediction and monitoring. The system combines Long Short-Term Memory Neural Networks (LSTM), Gradient Boosting, and Random Forest algorithms to predict water quality based on critical parameters including pH, temperature, dissolved oxygen, turbidity, and biochemical oxygen demand (BOD). Integrates ESP32 microcontrollers with IoT sensors for real-time data collection, transmitted via HTTP requests to a Next.js web application. Achieved exceptional accuracy of 96.99% with LSTM and Random Forest, and 96.72% with Gradient Boosting, demonstrating the effectiveness of combining IoT technology and machine learning for accurate water quality assessment and environmental monitoring.</p>
+            <p class="supervisor-info"><strong>Supervisor:</strong> Bright Yeboah-Akowuah, PhD<br>Department of Computer Engineering, Kwame Nkrumah University of Science and Technology</p>
+            <div class="publication-actions">
+              <a href="https://drive.google.com/file/d/1ZhnOluL-aoxELa48IRA94-uAvRBYhY0-/view" class="btn-research" target="_blank"><i class="fas fa-file-pdf"></i>View Thesis</a>
+            </div>
+            <div class="tech-stack">LSTM, Random Forest, Gradient Boosting, IoT, ESP32, Next.js, Water Quality Prediction, Environmental Monitoring</div>
+          </div>
+
+          <div class="research-note">
+            <p><strong>Research Interests:</strong> Machine Learning, AI in Healthcare, Computer Vision & Robotics, Deep Learning, LLMs & NLP, Scalable AI, AI Ethics, and Responsible AI Development for Social Good.</p>
+          </div>
+        </section>
+
+        <!-- Research & Competition Achievements -->
     <section class="section">
       <h2>Research & Competition Achievements</h2>
       
@@ -170,8 +216,11 @@
         <div class="tech-stack">NLP, Clinical AI, Healthcare Analytics, Small Data ML, Medical Reasoning</div>
       </div>
     </section>
+      </div>
 
-    <!-- Education -->
+      <!-- Education Tab -->
+      <div class="tab-content" data-content="education">
+        <!-- Education -->
     <section class="section">
       <h2>Education</h2>
       <div class="education-item">
@@ -209,8 +258,11 @@
         <div class="skill-item">MLOps</div>
       </div>
     </section>
+      </div>
 
-    <!-- Projects -->
+      <!-- Projects Tab -->
+      <div class="tab-content" data-content="projects">
+        <!-- Projects -->
     <section class="section">
       <h2>Featured Projects</h2>
       
@@ -278,7 +330,11 @@
         <div class="tech-stack">XGBoost, Feature Engineering, Python</div>
       </div>
     </section>
-  </div>
+      </div>
+
+    </div> <!-- End tab-content-container -->
+
+  </div> <!-- End container -->
 
   <script src="script.js"></script>
 </body>
