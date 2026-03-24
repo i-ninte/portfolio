@@ -31,6 +31,7 @@ async function getPosts(searchParams: { q?: string; category?: string; tag?: str
         coverImage: posts.coverImage,
         published: posts.published,
         createdAt: posts.createdAt,
+        updatedAt: posts.updatedAt,
         views: posts.views,
       })
       .from(posts)
