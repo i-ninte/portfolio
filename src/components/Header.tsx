@@ -60,6 +60,15 @@ export default function Header() {
           <i className="fas fa-chart-simple text-lg" />
           <span>Tableau</span>
         </a>
+        <a
+          href="https://huggingface.co/ninte"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-gray-300 hover:text-accent transition-colors"
+        >
+          <span className="text-lg">🤗</span>
+          <span>Hugging Face</span>
+        </a>
       </div>
 
       {/* Contact info */}

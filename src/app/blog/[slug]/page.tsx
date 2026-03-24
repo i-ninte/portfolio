@@ -187,6 +187,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <a href="https://linkedin.com/in/kwabenaobeng" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-accent">
                 <i className="fab fa-linkedin" />
               </a>
+              <a href="https://huggingface.co/ninte" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-accent" title="Hugging Face">
+                🤗
+              </a>
             </div>
           </div>
         </div>
