@@ -6,6 +6,7 @@ import { eq, sql } from 'drizzle-orm'
 import { formatDate, getReadingTime } from '@/lib/utils'
 import LikeButton from '@/components/blog/LikeButton'
 import CommentSection from '@/components/blog/CommentSection'
+import BlogContent from '@/components/blog/BlogContent'
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>
@@ -157,10 +158,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       )}
 
       {/* Content */}
-      <div
-        className="prose prose-invert prose-lg max-w-none mb-12"
-        dangerouslySetInnerHTML={{ __html: post.content }}
-      />
+      <BlogContent content={post.content} />
 
       {/* Like button */}
       <div className="flex items-center justify-center py-8 border-y border-dark-border mb-12">

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { generateResetToken, verifyResetToken, updatePassword, getAdminEmail } from '@/lib/auth'
+import { sendPasswordResetEmail } from '@/lib/email'
 
-// Request password reset (generates token and would normally send email)
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
@@ -14,19 +14,21 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ error: 'Failed to generate reset token' }, { status: 500 })
       }
 
-      // In production, you would send an email here
-      // For now, we'll return the reset link directly (only for development)
-      const resetLink = `/admin-portal-k0/reset-password?token=${resetToken}`
+      // Get admin email from database
+      const adminEmail = getAdminEmail()
 
-      console.log(`Password reset requested for ${getAdminEmail()}`)
-      console.log(`Reset link: ${resetLink}`)
+      // Send reset email
+      const emailSent = await sendPasswordResetEmail(adminEmail, resetToken)
 
-      // Return success - in production, don't expose the token
+      if (!emailSent) {
+        return NextResponse.json({ error: 'Failed to send reset email' }, { status: 500 })
+      }
+
+      console.log(`Password reset email sent to ${adminEmail}`)
+
       return NextResponse.json({
         success: true,
-        message: 'Password reset link generated',
-        // Only include token in development
-        ...(process.env.NODE_ENV !== 'production' && { resetLink }),
+        message: 'Password reset link sent to your email',
       })
     }
 
