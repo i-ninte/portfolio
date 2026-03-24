@@ -165,7 +165,7 @@ export default function Experience() {
             <div className="space-y-4">
               {exp.highlights.map((section, sIdx) => (
                 <div key={sIdx} className="pl-4 border-l-2 border-dark-border">
-                  {section.title && (
+                  {'title' in section && section.title && (
                     <h5 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-2">
                       {section.title}
                     </h5>
