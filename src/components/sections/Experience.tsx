@@ -46,7 +46,7 @@ const experiences = [
     company: 'Sikasense',
     role: 'Backend Engineer & ML Engineer',
     type: 'Remote',
-    duration: 'Dec 2024 - Present',
+    duration: 'Dec 2025 - Present',
     highlights: [
       {
         items: [
@@ -81,7 +81,7 @@ const experiences = [
     company: 'Dev2Win',
     role: 'AI/ML Engineer',
     type: 'Remote',
-    duration: 'Nov 2023 - Present',
+    duration: 'Nov 2023 - Dec 2024',
     highlights: [
       {
         items: [
